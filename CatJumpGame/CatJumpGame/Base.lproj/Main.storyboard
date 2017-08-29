@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jA8-kJ-48X">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="BradBunR.ttf">
+            <string>BradyBunchRemastered</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="j1I-EN-wif">
+            <objects>
+                <viewController id="jA8-kJ-48X" customClass="RootViewController" customModule="CatJumpGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lWI-PT-QJt"/>
+                        <viewControllerLayoutGuide type="bottom" id="yWb-0a-xZL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="E4q-aD-n4G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="SsX-G8-b86">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="YLb-2p-EHq">
+                                <rect key="frame" x="27" y="602.5" width="321" height="49.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyr-tg-QN2" userLabel="playButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="110.5" height="49.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Qyr-tg-QN2" secondAttribute="height" multiplier="20:9" id="fmP-dY-MaH"/>
+                                        </constraints>
+                                        <state key="normal" image="playButton"/>
+                                        <connections>
+                                            <segue destination="INx-Be-wpI" kind="show" id="mW2-eT-a72"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FRt-jK-xs5" userLabel="settingsButton">
+                                        <rect key="frame" x="210.5" y="0.0" width="110.5" height="49.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FRt-jK-xs5" secondAttribute="height" multiplier="20:9" id="hmp-iU-0iD"/>
+                                        </constraints>
+                                        <state key="normal" image="settingsButton"/>
+                                        <connections>
+                                            <segue destination="vZA-n9-Iyb" kind="show" id="jgd-Fr-gP5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qyr-tg-QN2" firstAttribute="width" secondItem="YLb-2p-EHq" secondAttribute="width" multiplier="0.3" constant="14.200000000000003" id="Hhb-Jw-8gT"/>
+                                    <constraint firstItem="FRt-jK-xs5" firstAttribute="width" secondItem="YLb-2p-EHq" secondAttribute="width" multiplier="0.3" constant="14.200000000000003" id="wHA-vg-IJS"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yWb-0a-xZL" firstAttribute="top" secondItem="SsX-G8-b86" secondAttribute="bottom" id="09z-8i-s1s"/>
+                            <constraint firstAttribute="trailing" secondItem="SsX-G8-b86" secondAttribute="trailing" id="BtM-6i-RVP"/>
+                            <constraint firstItem="YLb-2p-EHq" firstAttribute="centerX" secondItem="E4q-aD-n4G" secondAttribute="centerX" id="FLx-pq-mSZ"/>
+                            <constraint firstItem="SsX-G8-b86" firstAttribute="leading" secondItem="E4q-aD-n4G" secondAttribute="leading" id="IR5-Nc-GGk"/>
+                            <constraint firstItem="yWb-0a-xZL" firstAttribute="top" secondItem="YLb-2p-EHq" secondAttribute="bottom" constant="15" id="O00-hi-1lG"/>
+                            <constraint firstItem="SsX-G8-b86" firstAttribute="top" secondItem="E4q-aD-n4G" secondAttribute="top" id="ZSL-Ug-vuW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIT-bG-2O5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-975.20000000000005" y="-240.62968515742131"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Ixz-aO-DqA">
+            <objects>
+                <viewController id="vZA-n9-Iyb" customClass="SettingsViewController" customModule="CatJumpGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IVL-EU-fKy"/>
+                        <viewControllerLayoutGuide type="bottom" id="uBn-30-nbw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="13q-OC-RfX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscapeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="o4u-pM-NPp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Grh-mU-end">
+                                <rect key="frame" x="24.5" y="95.5" width="326" height="476"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VIA-CP-p4e">
+                                        <rect key="frame" x="0.0" y="0.0" width="326" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="neW-lw-GIQ">
+                                                <rect key="frame" x="0.0" y="0.0" width="145" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="2fJ-Aj-ayC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="BradyBunchRemastered" family="Brady Bunch Remastered" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Anonymous" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b8J-0S-GYC">
+                                                <rect key="frame" x="145" y="0.0" width="181" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="181" id="54b-Bo-asu"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="BradyBunchRemastered" family="Brady Bunch Remastered" pointSize="40"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rxe-nd-642">
+                                        <rect key="frame" x="0.0" y="95" width="326" height="55"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Music" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsn-K7-S9q">
+                                                <rect key="frame" x="0.0" y="0.0" width="256" height="55"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="55" id="qoq-Lz-FMJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="BradyBunchRemastered" family="Brady Bunch Remastered" pointSize="40"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEG-e7-0Jb" userLabel="musicButton">
+                                                <rect key="frame" x="256" y="8.5" width="70" height="38"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="38" id="baN-Yr-EF4"/>
+                                                    <constraint firstAttribute="width" constant="70" id="gtp-e5-KU5"/>
+                                                </constraints>
+                                                <state key="normal" image="switchOn"/>
+                                                <connections>
+                                                    <action selector="musicButtonTapped:" destination="vZA-n9-Iyb" eventType="touchUpInside" id="KMH-mh-d9T"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="nMd-Bo-6cF">
+                                        <rect key="frame" x="0.0" y="190" width="326" height="86"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JLZ-aM-7gg">
+                                                <rect key="frame" x="0.0" y="0.0" width="326" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="326" id="mqJ-on-n1h"/>
+                                                    <constraint firstAttribute="height" constant="30" id="zCL-Ky-8eE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="BradyBunchRemastered" family="Brady Bunch Remastered" pointSize="32"/>
+                                                <state key="normal" title="Show Game Transfer Code">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="showGameTransferCode:" destination="vZA-n9-Iyb" eventType="touchUpInside" id="Oo5-89-U2J"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KOc-gJ-f5C">
+                                                <rect key="frame" x="0.0" y="50" width="326" height="36"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="36" id="2qY-Wr-cqZ"/>
+                                                    <constraint firstAttribute="width" constant="326" id="Qar-Nr-x8i"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qmg-zw-jUW">
+                                        <rect key="frame" x="0.0" y="316" width="326" height="80"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Code Here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="31b-3x-DI3">
+                                                <rect key="frame" x="0.0" y="0.0" width="326" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="DHw-HI-zKV"/>
+                                                    <constraint firstAttribute="width" constant="326" id="Mad-rx-itI"/>
+                                                </constraints>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="BradyBunchRemastered" family="Brady Bunch Remastered" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FKI-qn-kGh">
+                                                <rect key="frame" x="0.0" y="50" width="326" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="P2Z-LE-wZY"/>
+                                                    <constraint firstAttribute="width" constant="326" id="dcJ-8K-yct"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="BradyBunchRemastered" family="Brady Bunch Remastered" pointSize="32"/>
+                                                <state key="normal" title="Transfer Game">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="transferGame:" destination="vZA-n9-Iyb" eventType="touchUpInside" id="YpU-cT-MXQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dxf-kn-gDp">
+                                        <rect key="frame" x="0.0" y="436" width="326" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="CdV-mw-xcS"/>
+                                        </constraints>
+                                        <state key="normal" image="gameTransferButton"/>
+                                        <connections>
+                                            <segue destination="nS6-is-qKm" kind="show" id="vI9-sM-ZQU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rPY-6Q-gmL">
+                                <rect key="frame" x="10" y="10" width="37.5" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="rPY-6Q-gmL" secondAttribute="height" multiplier="1:1" id="yfV-Zb-H5A"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="homeButton"/>
+                                <connections>
+                                    <segue destination="Hvq-F8-NQd" kind="unwind" unwindAction="unwindToRoot:" id="HXW-hR-5sT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uBn-30-nbw" firstAttribute="top" secondItem="o4u-pM-NPp" secondAttribute="bottom" id="Byb-MA-b77"/>
+                            <constraint firstItem="rPY-6Q-gmL" firstAttribute="width" secondItem="13q-OC-RfX" secondAttribute="width" multiplier="0.1" id="DIW-Hi-GLK"/>
+                            <constraint firstItem="rPY-6Q-gmL" firstAttribute="leading" secondItem="13q-OC-RfX" secondAttribute="leading" constant="10" id="RWx-tm-IOI"/>
+                            <constraint firstItem="o4u-pM-NPp" firstAttribute="leading" secondItem="13q-OC-RfX" secondAttribute="leading" id="Xx5-f0-sNZ"/>
+                            <constraint firstAttribute="trailing" secondItem="o4u-pM-NPp" secondAttribute="trailing" id="YKB-9i-yfE"/>
+                            <constraint firstItem="Grh-mU-end" firstAttribute="centerY" secondItem="13q-OC-RfX" secondAttribute="centerY" id="e2e-bq-t5E"/>
+                            <constraint firstItem="o4u-pM-NPp" firstAttribute="top" secondItem="13q-OC-RfX" secondAttribute="top" id="ocJ-VK-adt"/>
+                            <constraint firstItem="rPY-6Q-gmL" firstAttribute="top" secondItem="13q-OC-RfX" secondAttribute="topMargin" constant="10" id="ow6-Hz-ihl"/>
+                            <constraint firstItem="Grh-mU-end" firstAttribute="centerX" secondItem="13q-OC-RfX" secondAttribute="centerX" id="xYR-wE-pP7"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="gameTransferCodeLabel" destination="KOc-gJ-f5C" id="4kZ-m7-ASN"/>
+                        <outlet property="musicButton" destination="jEG-e7-0Jb" id="d2n-FO-xh0"/>
+                        <outlet property="nickNameTextField" destination="b8J-0S-GYC" id="eAW-5B-uZz"/>
+                        <outlet property="transferCodeTextField" destination="31b-3x-DI3" id="yen-er-5h4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aXx-nj-YVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Hvq-F8-NQd" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-975.20000000000005" y="554.57271364317842"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rEq-nf-OMX">
+            <objects>
+                <viewController id="nS6-is-qKm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VCS-ne-MQ2"/>
+                        <viewControllerLayoutGuide type="bottom" id="5Mc-7l-110"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wUL-xY-BDb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscapeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="akD-y1-Jcn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-U5-ONc">
+                                <rect key="frame" x="137.5" y="552" width="100" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="eYc-xk-4tC"/>
+                                    <constraint firstAttribute="height" constant="45" id="tFY-yP-Oup"/>
+                                </constraints>
+                                <state key="normal" image="okButton"/>
+                                <connections>
+                                    <segue destination="hx5-6r-MuK" kind="unwind" unwindAction="unwindToSettingsVC:" id="VFL-uj-pks"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameTransferButton" translatesAutoresizingMaskIntoConstraints="NO" id="VE9-Tl-aev">
+                                <rect key="frame" x="36" y="70" width="303" height="40"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvo-ZJ-eea">
+                                <rect key="frame" x="37.5" y="135" width="300" height="397"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="SmA-Qy-Iw9"/>
+                                </constraints>
+                                <string key="text">Game transfer allows you to keep your game progress when you switch devices. By clicking on the "Show Game Transfer Code” button on the settings page, you will receive a unique code that represents your game progress on your current device. On the new device that you wish to transfer your progress to, enter the code in the settings page. This will replace all of your new device’s progress with that of the device that generated the code. Internet connection is needed for successful transfer!</string>
+                                <fontDescription key="fontDescription" name="BradyBunchRemastered" family="Brady Bunch Remastered" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="akD-y1-Jcn" secondAttribute="trailing" id="8nf-a2-hbL"/>
+                            <constraint firstItem="6PX-U5-ONc" firstAttribute="centerX" secondItem="wUL-xY-BDb" secondAttribute="centerX" id="IKM-GG-hKA"/>
+                            <constraint firstItem="Zvo-ZJ-eea" firstAttribute="top" secondItem="VE9-Tl-aev" secondAttribute="bottom" constant="25" id="LcP-bu-69K"/>
+                            <constraint firstItem="akD-y1-Jcn" firstAttribute="leading" secondItem="wUL-xY-BDb" secondAttribute="leading" id="QJU-oC-XqA"/>
+                            <constraint firstItem="5Mc-7l-110" firstAttribute="top" secondItem="akD-y1-Jcn" secondAttribute="bottom" id="TRD-tA-piX"/>
+                            <constraint firstItem="Zvo-ZJ-eea" firstAttribute="centerX" secondItem="wUL-xY-BDb" secondAttribute="centerX" id="VX9-jh-fcN"/>
+                            <constraint firstItem="akD-y1-Jcn" firstAttribute="top" secondItem="wUL-xY-BDb" secondAttribute="top" id="fx0-Hh-xUC"/>
+                            <constraint firstItem="VE9-Tl-aev" firstAttribute="top" secondItem="VCS-ne-MQ2" secondAttribute="bottom" constant="50" id="iT6-66-Xhg"/>
+                            <constraint firstItem="6PX-U5-ONc" firstAttribute="top" secondItem="Zvo-ZJ-eea" secondAttribute="bottom" constant="20" id="isl-jq-XCE"/>
+                            <constraint firstItem="VE9-Tl-aev" firstAttribute="leading" secondItem="wUL-xY-BDb" secondAttribute="leadingMargin" constant="20" id="mLL-9c-8hQ"/>
+                            <constraint firstItem="5Mc-7l-110" firstAttribute="top" secondItem="6PX-U5-ONc" secondAttribute="bottom" constant="70" id="w6s-5s-uEb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="VE9-Tl-aev" secondAttribute="trailing" constant="20" id="zD1-C5-x4X"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ud9-Qj-4eZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hx5-6r-MuK" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-975.20000000000005" y="1262.5187406296852"/>
+        </scene>
+        <!--Alert View Controller-->
+        <scene sceneID="v5X-pm-iSs">
+            <objects>
+                <viewController storyboardIdentifier="alertViewController" id="70U-k2-bZM" customClass="AlertViewController" customModule="CatJumpGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lgl-iQ-IN2"/>
+                        <viewControllerLayoutGuide type="bottom" id="KEU-SO-whJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OF3-Zk-Qd6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscapeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="v69-WD-HAl">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alert" translatesAutoresizingMaskIntoConstraints="NO" id="XaB-uk-ctN">
+                                <rect key="frame" x="27" y="149.5" width="320" height="268"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="268" id="0dY-3Y-Pwy"/>
+                                    <constraint firstAttribute="width" constant="320" id="RT5-aQ-GKZ"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PqI-ek-Ib9" userLabel="okay">
+                                <rect key="frame" x="137" y="381" width="100" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="eM9-OY-eyb"/>
+                                    <constraint firstAttribute="height" constant="45" id="q9a-ER-vs4"/>
+                                </constraints>
+                                <state key="normal" image="okButton"/>
+                                <connections>
+                                    <action selector="okayButtonTapped:" destination="70U-k2-bZM" eventType="touchUpInside" id="WSk-f0-zih"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vd-Ll-sHR">
+                                <rect key="frame" x="70" y="219.5" width="234" height="148"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="234" id="U16-AL-376"/>
+                                    <constraint firstAttribute="height" constant="148" id="wPL-UB-HBb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4B1-hT-RhB" userLabel="yes">
+                                <rect key="frame" x="65" y="381" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="TUi-Pl-odO"/>
+                                    <constraint firstAttribute="height" constant="45" id="qqm-27-pWl"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="yesButton"/>
+                                <connections>
+                                    <action selector="yesButtonTapped:" destination="70U-k2-bZM" eventType="touchUpInside" id="Lxn-sp-Ldj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjk-lc-o5M" userLabel="no">
+                                <rect key="frame" x="265" y="381" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="LUx-0i-25L"/>
+                                    <constraint firstAttribute="height" constant="45" id="fI3-uq-KKv"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="noButton"/>
+                                <connections>
+                                    <action selector="noButtonTapped:" destination="70U-k2-bZM" eventType="touchUpInside" id="g5K-YT-jnG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PqI-ek-Ib9" firstAttribute="centerX" secondItem="OF3-Zk-Qd6" secondAttribute="centerX" id="22y-iv-v4P"/>
+                            <constraint firstItem="XaB-uk-ctN" firstAttribute="centerY" secondItem="OF3-Zk-Qd6" secondAttribute="centerY" constant="-50" id="5Rl-cj-qFa"/>
+                            <constraint firstItem="zjk-lc-o5M" firstAttribute="centerX" secondItem="OF3-Zk-Qd6" secondAttribute="centerX" constant="100" id="7mT-O9-YVn"/>
+                            <constraint firstItem="zjk-lc-o5M" firstAttribute="centerY" secondItem="OF3-Zk-Qd6" secondAttribute="centerY" constant="70" id="FhG-9U-tjb"/>
+                            <constraint firstItem="8vd-Ll-sHR" firstAttribute="centerY" secondItem="OF3-Zk-Qd6" secondAttribute="centerY" constant="-40" id="GNb-uj-IFy"/>
+                            <constraint firstAttribute="trailing" secondItem="v69-WD-HAl" secondAttribute="trailing" id="GaI-Pm-IuQ"/>
+                            <constraint firstItem="v69-WD-HAl" firstAttribute="top" secondItem="OF3-Zk-Qd6" secondAttribute="top" id="XfZ-pv-SYz"/>
+                            <constraint firstItem="8vd-Ll-sHR" firstAttribute="centerX" secondItem="OF3-Zk-Qd6" secondAttribute="centerX" id="YRD-Jr-mU1"/>
+                            <constraint firstItem="PqI-ek-Ib9" firstAttribute="centerY" secondItem="OF3-Zk-Qd6" secondAttribute="centerY" constant="70" id="eVj-Rs-d6V"/>
+                            <constraint firstItem="4B1-hT-RhB" firstAttribute="centerY" secondItem="OF3-Zk-Qd6" secondAttribute="centerY" constant="70" id="hs7-ab-dAe"/>
+                            <constraint firstItem="4B1-hT-RhB" firstAttribute="centerX" secondItem="OF3-Zk-Qd6" secondAttribute="centerX" constant="-100" id="mhk-lC-AHK"/>
+                            <constraint firstItem="XaB-uk-ctN" firstAttribute="centerX" secondItem="OF3-Zk-Qd6" secondAttribute="centerX" id="mjB-8Q-5q7"/>
+                            <constraint firstItem="KEU-SO-whJ" firstAttribute="top" secondItem="v69-WD-HAl" secondAttribute="bottom" id="pbY-Qs-6I0"/>
+                            <constraint firstItem="v69-WD-HAl" firstAttribute="leading" secondItem="OF3-Zk-Qd6" secondAttribute="leading" id="zZB-3u-5FM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertLabel" destination="8vd-Ll-sHR" id="l1M-ls-vSw"/>
+                        <outlet property="noButton" destination="zjk-lc-o5M" id="cm5-5u-o3C"/>
+                        <outlet property="okButton" destination="PqI-ek-Ib9" id="x0s-i1-pXz"/>
+                        <outlet property="yesButton" destination="4B1-hT-RhB" id="XXL-eq-Zqx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f8h-7X-rdl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-50.399999999999999" y="554.57271364317842"/>
+        </scene>
+        <!--Menu View Controller-->
+        <scene sceneID="rUH-Jb-9sE">
+            <objects>
+                <viewController id="INx-Be-wpI" customClass="MenuViewController" customModule="CatJumpGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jT8-tG-Kat"/>
+                        <viewControllerLayoutGuide type="bottom" id="962-4R-ima"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mls-lf-pIR" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tx2-eP-a5S">
+                                <rect key="frame" x="10" y="10" width="37.5" height="37.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="tx2-eP-a5S" secondAttribute="height" multiplier="1:1" id="F4Y-3n-7WX"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="homeButton"/>
+                                <connections>
+                                    <action selector="homeButtonTapped:" destination="INx-Be-wpI" eventType="touchUpInside" id="L7S-C2-bHx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tx2-eP-a5S" firstAttribute="leading" secondItem="mls-lf-pIR" secondAttribute="leading" constant="10" id="Mvc-GY-5qv"/>
+                            <constraint firstItem="tx2-eP-a5S" firstAttribute="top" secondItem="mls-lf-pIR" secondAttribute="top" constant="10" id="RXp-yk-lhD"/>
+                            <constraint firstItem="tx2-eP-a5S" firstAttribute="width" secondItem="mls-lf-pIR" secondAttribute="width" multiplier="0.1" id="eRf-Gg-lUK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="GPA-j8-Ng7" kind="unwind" identifier="returnHomeSegue" unwindAction="unwindToRoot:" id="xhx-0e-9Uf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N2A-YQ-NE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GPA-j8-Ng7" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4" y="-241"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alert" width="900" height="800"/>
+        <image name="gameTransferButton" width="326" height="40"/>
+        <image name="homeBackground" width="1532" height="2048"/>
+        <image name="homeButton" width="160" height="160"/>
+        <image name="landscapeBackground" width="1532" height="2048"/>
+        <image name="noButton" width="160" height="160"/>
+        <image name="okButton" width="274" height="122"/>
+        <image name="playButton" width="274" height="122"/>
+        <image name="settingsButton" width="274" height="122"/>
+        <image name="switchOn" width="105" height="56"/>
+        <image name="yesButton" width="160" height="160"/>
+    </resources>
+</document>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zah-X7-bbd">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Splash Screen View Controller-->
+        <scene sceneID="dnF-u3-T6y">
+            <objects>
+                <viewController id="zah-X7-bbd" customClass="SplashScreenViewController" customModule="CatJumpGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KBF-mW-t50"/>
+                        <viewControllerLayoutGuide type="bottom" id="esf-GB-Ogg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lCk-SN-N74">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splashScreen" translatesAutoresizingMaskIntoConstraints="NO" id="ArA-Fy-tmo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ArA-Fy-tmo" firstAttribute="top" secondItem="lCk-SN-N74" secondAttribute="top" id="Hk1-0Q-IFV"/>
+                            <constraint firstAttribute="trailing" secondItem="ArA-Fy-tmo" secondAttribute="trailing" id="Scb-Tl-AYf"/>
+                            <constraint firstItem="ArA-Fy-tmo" firstAttribute="leading" secondItem="lCk-SN-N74" secondAttribute="leading" id="fbo-S8-ZMx"/>
+                            <constraint firstItem="esf-GB-Ogg" firstAttribute="top" secondItem="ArA-Fy-tmo" secondAttribute="bottom" id="xBy-9z-zol"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kof-Y3-OC1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-708" y="183.95802098950526"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="splashScreen" width="1532" height="2048"/>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_CatJumpGame {
+  umbrella header "Pods-CatJumpGame-umbrella.h"
+
+  export *
+  module * { export * }
+}
